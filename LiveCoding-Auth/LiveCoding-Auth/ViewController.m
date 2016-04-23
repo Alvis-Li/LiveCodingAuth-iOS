@@ -18,6 +18,7 @@
 
 
 
+
 @interface ViewController ()<UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
@@ -66,10 +67,46 @@
     NSString *str = [NSString stringWithFormat:@"code=%@&grant_type=authorization_code&redirect_uri=%@",code,redirect_uri];
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:data];
-    NSError *error;
-    NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableLeaves error:nil];
-    NSLog(@"%@ %@",resultDic,error);
+    
+    
+    
+  
+    
+    
+    //1 POST Syn
+//      NSError *error;
+    //NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
+    
+    
+    
+    //2 POST Asyn
+//    NSOperationQueue *queue=[NSOperationQueue mainQueue];
+//    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+//        NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+//        NSLog(@"%@ %@",resultDic,error);
+//    }];
+//    NSLog(@"ff");
+    
+    
+    
+    //AFNetworking 3.1.0
+    
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+//    
+//    
+//    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+//        if (error) {
+//            if (data) {
+//                NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+//                NSLog(@"%@",resultDic);
+//            }
+//        } else {
+//            NSDictionary *resultDic = [NSDictionary dictionaryWithDictionary:responseObject];
+//            NSLog(@"%@",resultDic);
+//        }
+//    }];
+//    [dataTask resume];
     
 }
 @end

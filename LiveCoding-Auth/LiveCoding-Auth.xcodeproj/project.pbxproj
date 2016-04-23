@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					1CF221AB1CC8F5D80037B658 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = EFC4T7Y2N4;
 					};
 					1CF221C41CC8F5D90037B658 = {
 						CreatedOnToolsVersion = 7.3;
@@ -409,6 +410,7 @@
 				1CF221D01CC8F5D90037B658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CF221D11CC8F5D90037B658 /* Build configuration list for PBXNativeTarget "LiveCoding-AuthTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				1CF221D31CC8F5D90037B658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
